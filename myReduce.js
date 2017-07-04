@@ -4,10 +4,10 @@
 function myReduce(arr, callback, initialValue) {
 
 
-//  CODE INSIDE HERE   //
+// //  CODE INSIDE HERE   //
 	var accumulator = (initialValue === undefined) ? undefined : initialValue;
 	for (var i = 0; i < arr.length; i++) {
-		if (accumulator !== undefined)
+		if (accumulator !== undefined || i !== 0)
 		{
 			accumulator = callback(accumulator, arr[i], i, arr);
 		}
@@ -17,7 +17,9 @@ function myReduce(arr, callback, initialValue) {
 		}
 	}
 	return accumulator;
+
 }
+
 
 
 /*
