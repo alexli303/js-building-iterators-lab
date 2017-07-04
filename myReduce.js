@@ -3,10 +3,22 @@
 
 function myReduce(arr, callback) {
 
+// reduce(
+//   function (
+//     accumulator,
+//     currentValue,
+//     currentIndex,
+//     array
+//   ) {
+//     return accumulator + currentValue;
+//   }
+// );
+
 //  CODE INSIDE HERE   //
   for (var i = 0; i < arr.length ;i++) {
-  	
-  	callback(arr[i],i,arr);
+  	var initialValue = null;
+  	initialValue += arr[i];
+  	callback(initialValue, arr[i], i, arr);
   
   }
 }
